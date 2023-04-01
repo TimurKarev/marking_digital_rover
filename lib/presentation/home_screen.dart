@@ -29,7 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text('Admin'),
+                    Text(
+                      'Admin',
+                    ),
                     Icon(Icons.admin_panel_settings),
                   ],
                 ),
@@ -56,7 +58,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Container(
                     child: Scaffold(
                       appBar: AppBar(
-                        title: Text(_current.name),
+                        centerTitle: false,
+                        title: Text(
+                          _current.name,
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                        ),
                       ),
                       body: _ContentPlaceholder(_current),
                     ),
